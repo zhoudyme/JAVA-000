@@ -23,7 +23,7 @@ import static io.netty.handler.codec.http.HttpResponseStatus.OK;
 import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 
 /**
- * 整合上次HttpClient的代码，以及实现过滤功能
+ * 整合上次HttpClient的代码，以及实现过滤器功能
  *
  * @author zhoudy
  * @date 2020/11/03
