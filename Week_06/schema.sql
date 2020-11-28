@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50720
 File Encoding         : 65001
 
-Date: 2020-11-28 17:48:49
+Date: 2020-11-28 18:20:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -48,7 +48,7 @@ CREATE TABLE `order` (
   `p_state` int(2) DEFAULT '0' COMMENT '数据状态（0-正常，1-删除）',
   `p_update_datetime` datetime DEFAULT NULL COMMENT '数据更新时间',
   `p_version` int(11) DEFAULT NULL COMMENT '版本号',
-  `order_status` int(2) NOT NULL COMMENT '订单状态（1-下单完成，2-关闭订单，3-订单完成）',
+  `order_status` int(2) DEFAULT NULL COMMENT '订单状态（1-下单完成，2-关闭订单，3-订单完成）',
   `order_price` decimal(10,2) DEFAULT NULL COMMENT '订单总价',
   `user_id` int(20) NOT NULL COMMENT '下单用户id',
   PRIMARY KEY (`p_id`) USING BTREE
@@ -71,7 +71,7 @@ CREATE TABLE `tt_order_goods` (
   `goods_id` int(10) NOT NULL COMMENT '商品id',
   `goods_count` int(10) NOT NULL COMMENT '商品购买数量',
   PRIMARY KEY (`p_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品信息表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单商品关系表';
 
 -- ----------------------------
 -- Table structure for user
