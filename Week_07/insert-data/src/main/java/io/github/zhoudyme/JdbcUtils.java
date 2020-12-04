@@ -1,3 +1,5 @@
+package io.github.zhoudyme;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 
@@ -7,7 +9,7 @@ import java.sql.DriverManager;
  */
 public class JdbcUtils {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/jdbc_demo?serverTimezone=Asia/Shanghai&useSSL=false&characterEncoding=UTF-8&rewriteBatchedStatements=true";
+    private static final String URL = "jdbc:mysql://localhost:3306/electronic_commerce?serverTimezone=Asia/Shanghai&useSSL=false&characterEncoding=UTF-8&rewriteBatchedStatements=true";
     private static final String USER = "root";
     private static final String PASSWORD = "root";
 
